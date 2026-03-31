@@ -411,6 +411,18 @@
         to track you across apps and websites owned by other companies. If you decline, AdMob will serve
         non-personalized ads, and your Identifier for Advertisers (IDFA) will not be accessed.
       </p>
+      
+      <h3>6.2 Consent Management (UMP SDK)</h3>
+      <p>
+        The App uses the latest <strong style="color:var(--text)">Google User Messaging Platform (UMP) SDK v4.0</strong>
+        to request and manage your advertising consent at every app startup. Specifically:
+      </p>
+      <ul>
+        <li>On first launch (or when consent has expired), a Google-hosted consent form is shown before any ads are loaded.</li>
+        <li>The Google Mobile Ads SDK is only initialised <strong style="color:var(--text)">after</strong> consent has been obtained, or after it has been determined that consent is not required in your region.</li>
+        <li>Returning users whose consent is already current proceed directly to ads without seeing the form again.</li>
+        <li>If you are in the EEA, UK, or Switzerland, you will be presented with full GDPR-compliant consent choices including the option to use non-personalized ads.</li>
+      </ul>
     </section>
 
     <!-- ── Section 7 ── -->
