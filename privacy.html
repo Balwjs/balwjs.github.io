@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — BullBear Battle</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bull: #2ecc71;
+      --bear: #e74c3c;
+      --accent: #f39c12;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-alt: #1c2230;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --link: #58a6ff;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .logo-badge .bull { color: var(--bull); }
+    .logo-badge .bear { color: var(--bear); }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--bull) 0%, var(--accent) 50%, var(--bear) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.6rem;
+    }
+
+    .last-updated {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Short version callout ── */
+    .callout {
+      background: var(--surface);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .callout strong {
+      color: var(--accent);
+    }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    section h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--bull), var(--accent));
+      color: #000;
+      font-size: 0.8rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    section p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    section ul li {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      padding: 0.25rem 0 0.25rem 1.4rem;
+      position: relative;
+    }
+
+    section ul li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--bull);
+      font-size: 0.8rem;
+      top: 0.3rem;
+    }
+
+    /* ── Tables ── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 0.75rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    thead tr {
+      background: var(--surface-alt);
+    }
+
+    th {
+      text-align: left;
+      padding: 0.65rem 1rem;
+      font-weight: 700;
+      color: var(--text);
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 0.6rem 1rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,0.02);
+    }
+
+    td code, th code {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: var(--link);
+    }
+
+    /* ── Highlight chip ── */
+    .chip {
+      display: inline-block;
+      background: rgba(46, 204, 113, 0.12);
+      color: var(--bull);
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      border-radius: 999px;
+      padding: 0.15rem 0.65rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+    }
+
+    footer strong {
+      color: var(--text);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      section {
+        padding: 1.25rem 1rem;
+      }
+
+      header {
+        padding: 2rem 0.5rem 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ── Header ── -->
+    <header>
+      <div class="logo-badge">
+        <span class="bull">▲ Bull</span>
+        <span style="color:var(--border)">|</span>
+        <span class="bear">▼ Bear</span>
+        <span>Battle</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: <strong>March 30, 2026</strong></p>
+    </header>
+
+    <!-- ── Overview callout ── -->
+    <div class="callout">
+      <strong>Short version:</strong> We don't collect personal data ourselves. The App uses Google AdMob to show ads,
+      which may collect certain device and ad interaction data as described below.
+    </div>
+
+    <!-- ── Section 1 ── -->
+    <section id="section-1">
+      <h2><span class="section-num">1</span> Information We Collect</h2>
+      <p><strong style="color:var(--text)">We (BullBear Games) do not directly collect any personal information.</strong></p>
+      <p>The App does not:</p>
+      <ul>
+        <li>Require account registration or login</li>
+        <li>Collect your name, email, phone number, or any personal identifier</li>
+        <li>Access your contacts, camera, microphone, or location</li>
+        <li>Send any game data to external servers</li>
+        <li>Use cookies or tracking technologies of our own</li>
+      </ul>
+    </section>
+
+    <!-- ── Section 2 ── -->
+    <section id="section-2">
+      <h2><span class="section-num">2</span> Data Stored Locally on Your Device</h2>
+      <p>The App stores the following data <strong style="color:var(--text)">locally on your device only</strong>, using Android SharedPreferences:</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Game balance and statistics</td><td>Track your in-game progress</td></tr>
+            <tr><td>Settings preferences</td><td>Remember your chosen game settings</td></tr>
+            <tr><td>Achievements unlocked</td><td>Track game milestones</td></tr>
+            <tr><td>Leaderboard scores</td><td>Display your personal best scores</td></tr>
+            <tr><td>Player profile (name, persona)</td><td>Personalise the game experience</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This data:</p>
+      <ul>
+        <li>Never leaves your device</li>
+        <li>Is not accessible to us or any third party</li>
+        <li>Can be deleted by uninstalling the App or using the <strong style="color:var(--text)">"Reset"</strong> option in Settings</li>
+      </ul>
+    </section>
+
+    <!-- ── Section 3 ── -->
+    <section id="section-3">
+      <h2><span class="section-num">3</span> Virtual Currency</h2>
+      <p>
+        BullBear Battle uses a <strong style="color:var(--text)">virtual currency (₹ Rupees)</strong> that has no
+        real-world monetary value and cannot be exchanged for real money or goods.
+        No real financial transactions take place.
+      </p>
+    </section>
+
+    <!-- ── Section 4 ── -->
+    <section id="section-4">
+      <h2><span class="section-num">4</span> Permissions Used</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>VIBRATE</code></td><td>Haptic feedback on trade results (optional, can be disabled in Settings)</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Required by Google AdMob to load and display advertisements</td></tr>
+            <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Used by AdMob to check network connectivity before loading ads</td></tr>
+            <tr><td><code>AD_ID</code></td><td>Used by AdMob to serve relevant advertisements</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── Section 5 ── -->
+    <section id="section-5">
+      <h2><span class="section-num">5</span> Children's Privacy</h2>
+      <p>
+        The App does not knowingly collect personal information from anyone, including children under 13.
+        The Google AdMob SDK may collect device identifiers for ad serving purposes as described in Section 6.
+        The content rating is <span class="chip">Everyone</span>.
+      </p>
+    </section>
+
+    <!-- ── Section 6 ── -->
+    <section id="section-6">
+      <h2><span class="section-num">6</span> Third-Party Services — Google AdMob</h2>
+      <p>
+        The App uses <strong style="color:var(--text)">Google AdMob</strong> to display interstitial advertisements
+        between trades. AdMob is operated by Google LLC and may automatically collect certain information, including:
+      </p>
+      <ul>
+        <li><strong style="color:var(--text)">Advertising ID</strong> (Android Advertising Identifier)</li>
+        <li><strong style="color:var(--text)">Device information</strong> (device model, OS version, screen size)</li>
+        <li><strong style="color:var(--text)">IP address</strong> (used to derive approximate location at city/region level)</li>
+        <li><strong style="color:var(--text)">Ad interaction data</strong> (impressions, clicks)</li>
+      </ul>
+      <p>
+        This data is collected and processed by Google in accordance with
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      </p>
+      <p>
+        <strong style="color:var(--text)">Ad frequency:</strong> The first ad appears after 10 completed trades,
+        then every 5 trades thereafter. Ads never interrupt an active trade.
+      </p>
+      <p>
+        <strong style="color:var(--text)">Opting out of personalized ads:</strong> You can opt out of personalized
+        advertising by visiting your device's <em>Settings → Google → Ads → "Opt out of Ads Personalization"</em>
+        (or <em>"Delete advertising ID"</em> on Android 12+).
+      </p>
+      <p>For more information about Google AdMob's data practices, please see:</p>
+      <ul>
+        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob &amp; AdSense policy</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from apps</a></li>
+      </ul>
+
+      <h3>6.1 Specific to iOS Users</h3>
+      <p>
+        In accordance with Apple's App Tracking Transparency (ATT) framework, the App will request your permission
+        to track you across apps and websites owned by other companies. If you decline, AdMob will serve
+        non-personalized ads, and your Identifier for Advertisers (IDFA) will not be accessed.
+      </p>
+    </section>
+
+    <!-- ── Section 7 ── -->
+    <section id="section-7">
+      <h2><span class="section-num">7</span> Security</h2>
+      <p>
+        No personal data is collected or transmitted by the App itself. All local game data is stored in
+        Android's standard app storage, protected by the operating system's security model. Network communication
+        used by Google AdMob for ad serving is encrypted via HTTPS.
+      </p>
+    </section>
+
+    <!-- ── Section 8 ── -->
+    <section id="section-8">
+      <h2><span class="section-num">8</span> Changes to This Policy</h2>
+      <p>
+        If we update this Privacy Policy, the new version will be posted at this URL with an updated date.
+        Continued use of the App after changes constitutes acceptance of the new policy.
+      </p>
+    </section>
+
+    <!-- ── Section 9 ── -->
+    <section id="section-9">
+      <h2><span class="section-num">9</span> Contact Us</h2>
+      <p>If you have questions about this Privacy Policy, please contact:</p>
+      <ul>
+        <li><strong style="color:var(--text)">BullBear Games</strong></li>
+        <li>Email: <a href="mailto:balwjs@gmail.com">balwjs@gmail.com</a></li>
+        <li>Website: <a href="https://github.com/Balwjs/bullbearbattle" target="_blank" rel="noopener">github.com/Balwjs/bullbearbattle</a></li>
+      </ul>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <p><strong>BullBear Games</strong> · This privacy policy is effective as of March 30, 2026.</p>
+      <p style="margin-top:0.4rem;">
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:balwjs@gmail.com">Contact</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
+
